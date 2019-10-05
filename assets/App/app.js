@@ -22,10 +22,10 @@ document.getElementById('btn').addEventListener('click', e => {
 
 db
 .collection('trains')
-.onSnapshot(({docs}) => {
+.onSnapshot(({ docs }) => {
     docs.forEach(train =>{
         console.log(train)
-        // let {trainName, Destination, trainTime,frequencies} = doc.data
+        let {trainName, Destination, trainTime,frequencies} = doc.data
 
             let trainElem = document.createElement('class')
             trainElem.innerHTML = `<tbody>
